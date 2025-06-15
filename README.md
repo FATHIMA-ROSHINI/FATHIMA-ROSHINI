@@ -8,7 +8,7 @@
 ---
 
 ### 🌟 About Me
-- 🎓 B.Tech in Artificial Intelligence | 2nd Year Student  
+- 🎓 B.Tech in Artificial Intelligence 
 - 👩‍💻 Currently: Intern @ Oasis Infobyte  
 - 💡 Passionate about **AI/ML**, **UI/UX**, **Prompt Engineering**, and **Web Development**  
 - 🛠️ Prototyping startup ideas in **AI-powered healthcare** & **med-tech**  
@@ -33,7 +33,7 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=roshni-ai&show_icons=true&theme=radical" width="45%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=roshnifatima&show_icons=true&theme=radical" width="45%" />
   <img src="https://streak-stats.demolab.com?user=roshni-ai&theme=radical&date_format=M%20j%5B%2C%20Y%5D" width="45%" />
 </p>
 
