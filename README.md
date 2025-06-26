@@ -1,6 +1,6 @@
 <!-- README.md -->
 
-<h1 align="center" style="font-family:Arial; font-weight:bold;">Hi, I'm FatimaRoshni👋</h1>
+<h1 align="center" style="font-family:Arial; font-weight:bold;">Hi, I'm FathimaRoshni👋</h1>
 
 <p align="center" style="font-size:18px;">
   <strong>AI/ML Developer | Python Programmer | Creating Intelligent & Autonomous Technologies</strong>
