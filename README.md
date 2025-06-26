@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+  <a href="linkedin.com/in/fatima-roshini-siyad-8477292b3" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:your.email@example.com" target="_blank">
+  <a href="mailto:rxzrosh@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" />
   </a>
   <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">
