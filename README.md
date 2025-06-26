@@ -1,21 +1,20 @@
 <!-- README.md -->
 
-<h1 align="center">Hi there, I'm <span style="color:#0ABAB5">Roshni</span> 👋</h1>
+<h1 align="center">Hi there, I'm RoshniFatima 👋</h1>
 
 <p align="center">
-  <strong>AI/ML Developer | Python Programmer | Data & Automation Enthusiast</strong><br>
-  Building Intelligent and Scalable Technologies.
+  <strong>AI/ML Developer | Python Programmer | Creating Intelligent & Autonomous Technologies</strong>
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:your.email@example.com" target="_blank">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
 
@@ -23,39 +22,50 @@
 
 ## 🚀 About Me
 
-I'm a passionate AI/ML developer and Python programmer with a focus on intelligent systems and automation. With a strong foundation in machine learning, data analysis, and prompt engineering, I aim to solve real-world problems using clean, scalable code and modern tools.
+I'm a passionate AI/ML developer with a strong foundation in Python and a focus on building intelligent, autonomous systems. My journey is driven by curiosity and purpose—solving real-world problems through applied machine learning, automation, and generative AI.
 
-### 🧠 Key Strengths:
-- AI/ML Model Development & Deployment
-- Prompt Engineering & LLMs (ChatGPT/OpenAI API)
-- Data Analysis & Visualization (Pandas, Matplotlib, Seaborn)
-- Python Development & Automation Scripts
-- Clean Code, Scalable Logic, Git Workflow
+- 🧠 Trained in Prompt Engineering, LLMs, and ML Pipelines  
+- 📊 Experienced in Data Analysis, Scikit-learn, and TensorFlow  
+- 🤖 Focused on Smart System Development and Real-world AI Applications  
+- 📚 Constant learner—exploring NLP, MLOps, and cutting-edge AI research  
+- 🌍 Open to collaborations, internships, and impactful AI-driven projects
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🛠️ Skills & Technologies
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas" />
-  <img src="https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=flat-square&logo=scikit-learn" />
-  <img src="https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Google%20Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white" />
-  <img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github" />
-  <img src="https://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&logo=visual-studio-code" />
+### Languages & Tools
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
+</p>
+
+### Libraries & Frameworks
+<p>
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white"/>
+</p>
+
+### Tools & Platforms
+<p>
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
 </p>
 
 ---
 
-## 📌 Featured Certifications
+## 📜 Certifications
 
-- 🧠 **ChatGPT Prompt Engineering** – DeepLearning.AI (2025)  
-- 📊 **Data Analysis with Python** – CognitiveClass (2025)  
-- 🤖 **Machine Learning with Python** – IBM SkillsBuild (2025)  
-- 📈 **Google Digital Academy Certification** – Skillshop (2025)  
+- 🔹 **ChatGPT Prompt Engineering for Developers** – DeepLearning.AI  
+- 🔹 **Data Analysis with Python** – CognitiveClass  
+- 🔹 **Machine Learning with Python** – IBM SkillsBuild 
+- 🔹 **Google Digital Academy** – Skillshop  
 
 ---
 
@@ -63,25 +73,9 @@ I'm a passionate AI/ML developer and Python programmer with a focus on intellige
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=YOUR-GITHUB-USERNAME&show_icons=true&theme=tokyonight" />
-  <br>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR-GITHUB-USERNAME&theme=tokyonight"/>
 </p>
 
 ---
 
-## 💼 Projects (Coming Soon)
-
-| Project | Description | Tech |
-|--------|-------------|------|
-| **Voice Assistant** | A Python-based assistant using voice commands and NLP | Python, SpeechRecognition, Pyttsx3 |
-| **AI Chatbot** | Custom chatbot using ChatGPT API with prompt engineering | Python, OpenAI API |
-| **Data Dashboard** | Visualizing and analyzing real datasets | Pandas, Matplotlib, Streamlit |
-
----
-
-## 📫 Let's Connect
-
-> I'm always open to collaborations, learning opportunities, and innovative projects in the field of AI, ML, and intelligent automation.  
-> Feel free to reach out — Let's build something amazing!
-
-
+<h3 align="center">✨ Building with curiosity, driven by data, and guided by purpose ✨</h3>
