@@ -63,9 +63,3 @@ I'm an enthusiastic AI/ML developer with a solid foundation in Python and a pass
 
 ---
 
-Replace:
-- `ROSHNIFATIMA` with your GitHub username  
-- `linkedin.com/in/fatima-roshini-siyad-8477292b3` with your LinkedIn URL  
-- `rxzrosh@gmail.com` with your actual contact email
-
----
