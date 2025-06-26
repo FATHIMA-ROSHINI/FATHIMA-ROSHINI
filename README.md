@@ -13,7 +13,7 @@
   <a href="mailto:rxzrosh@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" />
   </a>
-  <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">
+  <a href="https://github.com/ROSHNIFATIMA" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" />
   </a>
 </p>
@@ -27,7 +27,7 @@ I'm an enthusiastic AI/ML developer with a solid foundation in Python and a pass
 - 🔭 I’m currently working on **AI-based automation projects**
 - 🌱 I’m learning **LLMs, NLP, and Generative AI**
 - 💬 Ask me about **Machine Learning, Prompt Engineering, and Python**
-- 📫 Reach me at: **your.email@example.com**
+- 📫 Reach me at: **rxzrosh@gmail.com**
 - 🚀 I’m open to **internships, collaborations, and AI startup ideas**
 
 ---
@@ -48,8 +48,8 @@ I'm an enthusiastic AI/ML developer with a solid foundation in Python and a pass
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR-GITHUB-USERNAME&show_icons=true&theme=tokyonight" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR-GITHUB-USERNAME&theme=tokyonight"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=ROSHNIFATIMA&show_icons=true&theme=tokyonight" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ROSHNIFATIMA&theme=tokyonight"/>
 </p>
 
 ---
@@ -64,8 +64,8 @@ I'm an enthusiastic AI/ML developer with a solid foundation in Python and a pass
 ---
 
 Replace:
-- `YOUR-GITHUB-USERNAME` with your GitHub username  
-- `YOUR-LINKEDIN` with your LinkedIn URL  
-- `your.email@example.com` with your actual contact email
+- `ROSHNIFATIMA` with your GitHub username  
+- `linkedin.com/in/fatima-roshini-siyad-8477292b3` with your LinkedIn URL  
+- `rxzrosh@gmail.com` with your actual contact email
 
 ---
