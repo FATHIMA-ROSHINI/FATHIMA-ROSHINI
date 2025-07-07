@@ -1,19 +1,19 @@
 <!-- README.md -->
 
-<h1 align="center">Hi there, I'm RoshniFatima 👋</h1>
+<h1 align="center">Hi there, I'm RoshniFatima 🤖👋</h1>
 
 <p align="center">
   <strong>AI/ML Developer | Python Programmer | Creating Intelligent & Autonomous Technologies</strong>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+  <a href="https://www.linkedin.com/in/fatima-roshini-siyad-8477292b3" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:your.email@example.com" target="_blank">
+  <a href="mailto:rxzrosh@gamil.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">
+  <a href="https://github.com/ROSHNIFATIMA" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
