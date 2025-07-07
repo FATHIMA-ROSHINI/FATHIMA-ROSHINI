@@ -1,6 +1,6 @@
 <!-- README.md -->
 
-<h1 align="center">Hi there, I'm RoshniFatima 🤖👋</h1>
+<h1 align="center">Hi there, I'm Roshnii! 🤖👋</h1>
 
 <p align="center">
   <strong>AI/ML Developer | Python Programmer | Creating Intelligent & Autonomous Technologies</strong>
@@ -13,7 +13,7 @@
   <a href="mailto:rxzrosh@gamil.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://github.com/ROSHNIFATIMA" target="_blank">
+  <a href="https://github.com/FATHIMA-ROSHINI" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
@@ -72,8 +72,8 @@ I'm a passionate AI/ML developer with a strong foundation in Python and a focus 
 ## 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ROSHNIFATIMA&show_icons=true&theme=tokyonight" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ROSHNIFATIMA&theme=tokyonight"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=FATHIMA-ROSHINI&show_icons=true&theme=tokyonight" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=FATHIMA-ROSHINI&theme=tokyonight"/>
 </p>
 
 ---
