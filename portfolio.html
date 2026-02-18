@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathima Roshini Siyad | AI Engineer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0F172A;
+            color: #CBD5E1;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00E5FF;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #CBD5E1;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00E5FF;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            top: 10%;
+            right: -10%;
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+            bottom: 10%;
+            left: -5%;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #F8FAFC;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #00E5FF;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            color: #94A3B8;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid #3B82F6;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            color: #3B82F6;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: #3B82F6;
+            color: white;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #2563EB;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00E5FF;
+            border: 2px solid #00E5FF;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 229, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #F8FAFC;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #94A3B8;
+            margin-bottom: 4rem;
+            font-size: 1.1rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: #1E293B;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+            border-color: #3B82F6;
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #3B82F6 0%, #00E5FF 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .project-header h3 {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .project-body {
+            padding: 2rem;
+        }
+
+        .project-problem {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-problem h4 {
+            color: #00E5FF;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .project-solution {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-solution h4 {
+            color: #3B82F6;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .tech-stack {
+            margin: 1.5rem 0;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #3B82F6;
+        }
+
+        .project-outcome {
+            background: rgba(0, 229, 255, 0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #00E5FF;
+            margin: 1.5rem 0;
+        }
+
+        .project-outcome h4 {
+            color: #00E5FF;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-link {
+            flex: 1;
+            text-align: center;
+            padding: 0.8rem;
+            background: #3B82F6;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            background: #2563EB;
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .profile-placeholder {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3B82F6 0%, #00E5FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: #1E293B;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .skill-card h4 {
+            color: #00E5FF;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: #1E293B;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #00E5FF;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: #0F172A;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 10px;
+            color: #CBD5E1;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3B82F6;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: #1E293B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3B82F6;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .social-link:hover {
+            background: #3B82F6;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: #0F172A;
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">FRS</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>FATHIMA ROSHINI SIYAD</h1>
+            <p class="tagline">AI Engineer • Innovator • Developer</p>
+            <p class="description">
+                I build intelligent systems that bridge software, AI, and real-world problem-solving. 
+                Focused on innovation, rapid prototyping, and scalable product engineering.
+            </p>
+            <div class="badges">
+                <span class="badge">AI</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Full Stack</span>
+                <span class="badge">Innovation</span>
+            </div>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Intelligent systems solving real-world challenges</p>
+
+        <div class="projects-grid">
+            <!-- AIR GUARDIAN DRONE -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>AIR GUARDIAN DRONE</h3>
+                </div>
+                <div class="project-body">
+                    <div class="project-problem">
+                        <h4>Problem</h4>
+                        <p>Traditional manual drones struggle with stable indoor flight due to GPS denial and sensor noise.</p>
+                    </div>
+                    <div class="project-solution">
+                        <h4>Solution</h4>
+                        <p>Built an autonomous micro-drone with optical flow stabilization, positional control using INAV, and predictive drift correction algorithms.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <h4 style="color: #CBD5E1; margin-bottom: 0.5rem;">Tech Stack</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">INAV</span>
+                            <span class="tech-tag">Pixhawk</span>
+                            <span class="tech-tag">Optical Flow</span>
+                            <span class="tech-tag">Kalman Filters</span>
+                        </div>
+                    </div>
+                    <div class="project-outcome">
+                        <h4>Outcome</h4>
+                        <p>Achieved ~40% improvement in indoor stability and reduced drift to <25cm over a 3m hover duration.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEURO SIGHT -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>NEURO SIGHT</h3>
+                </div>
+                <div class="project-body">
+                    <div class="project-problem">
+                        <h4>Problem</h4>
+                        <p>Early neurological signals are subtle and often untracked, leading to delayed understanding of cognitive strain.</p>
+                    </div>
+                    <div class="project-solution">
+                        <h4>Solution</h4>
+                        <p>Developed an ML model using micro-expressions, blink rate, and eye-movement features to estimate cognitive load.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <h4 style="color: #CBD5E1; margin-bottom: 0.5rem;">Tech Stack</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">MediaPipe</span>
+                        </div>
+                    </div>
+                    <div class="project-outcome">
+                        <h4>Outcome</h4>
+                        <p>Prototype achieved consistent prediction accuracy during controlled cognitive tests.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESPI AI -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>RESPI AI</h3>
+                </div>
+                <div class="project-body">
+                    <div class="project-problem">
+                        <h4>Problem</h4>
+                        <p>Respiratory conditions often go undetected until symptoms worsen.</p>
+                    </div>
+                    <div class="project-solution">
+                        <h4>Solution</h4>
+                        <p>Created an AI model that analyzes breathing audio + spectrograms to detect abnormal respiration patterns.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <h4 style="color: #CBD5E1; margin-bottom: 0.5rem;">Tech Stack</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Librosa</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                    </div>
+                    <div class="project-outcome">
+                        <h4>Outcome</h4>
+                        <p>Prototype detected anomalies with >80% accuracy in test recordings.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link">Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">AI Engineer passionate about creating impactful solutions</p>
+
+        <div class="about-content">
+            <div class="about-image">
+                <div class="profile-placeholder">FR</div>
+            </div>
+            <div class="about-text">
+                <h3 style="color: #00E5FF; margin-bottom: 1rem; font-size: 1.8rem;">My Journey</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+                    I'm an AI engineer driven by curiosity and a passion for building systems that matter. 
+                    My work spans autonomous systems, computer vision, and health-tech AI applications. 
+                    I thrive in rapid prototyping environments and love turning complex problems into elegant, 
+                    scalable solutions.
+                </p>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+                    With experience across hackathons, internships, and independent projects, I've developed 
+                    a unique blend of theoretical knowledge and hands-on engineering skills. My approach 
+                    combines rigorous problem-solving with creative innovation.
+                </p>
+
+                <h3 style="color: #3B82F6; margin-bottom: 1rem; margin-top: 2rem; font-size: 1.5rem;">Core Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>Machine Learning</h4>
+                        <p style="font-size: 0.9rem;">TensorFlow, Keras, PyTorch</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Computer Vision</h4>
+                        <p style="font-size: 0.9rem;">OpenCV, MediaPipe</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Robotics</h4>
+                        <p style="font-size: 0.9rem;">INAV, Pixhawk, Sensors</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Full Stack</h4>
+                        <p style="font-size: 0.9rem;">Python, Flask, React</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Let's collaborate on something amazing</p>
+
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+
+            <div class="social-links">
+                <a href="#" class="social-link" title="Email">✉</a>
+                <a href="#" class="social-link" title="GitHub">⚙</a>
+                <a href="#" class="social-link" title="LinkedIn">in</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fathima Roshini Siyad. Built with passion for innovation.</p>
+    </footer>
+</body>
+</html>
