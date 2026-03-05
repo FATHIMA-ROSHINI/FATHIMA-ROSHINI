@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,40:0d2137,100:0a3d62&height=220&section=header&text=Fathima%20Roshini%20Siyad&fontSize=44&fontColor=e0f2fe&fontAlignY=36&desc=Artificial%20Intelligence%20Engineering%20Student%20%7C%20AI%20%26%20ML%20Developer&descAlignY=56&descSize=15&animation=fadeIn" width="100%"/>
+<h1>👋 Hi, I'm Fathima Roshini Siyad</h1>
+
+<h3>🎓 B.Tech Artificial Intelligence Engineering Student</h3>
+<h3>🤖 AI & ML Developer &nbsp;|&nbsp; Python Programmer &nbsp;|&nbsp; Robotics Enthusiast</h3>
 
 <br/>
 
