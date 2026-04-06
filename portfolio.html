@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fathima Roshini Siyad | AI Engineer Portfolio</title>
+    <title>Fathima Roshini Siyad | AI & Robotics Engineer</title>
+    <meta name="description" content="AI Engineering student specializing in Machine Learning, Deep Learning, Robotics and Healthcare AI. B.Tech AI Engineering at Baselios Mathews II College.">
     <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --accent-cyan: #00d4ff;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9ca3af;
+            --border-color: rgba(59, 130, 246, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,22 +25,27 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0F172A;
-            color: #CBD5E1;
-            line-height: 1.6;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 4px; }
 
         /* Navigation */
         nav {
-            background: rgba(15, 23, 42, 0.95);
-            padding: 1.5rem 5%;
+            background: rgba(10, 10, 15, 0.9);
+            padding: 1rem 5%;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
         }
 
         nav .container {
@@ -38,28 +56,42 @@
             align-items: center;
         }
 
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #00E5FF;
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            letter-spacing: -0.5px;
         }
+
+        .logo span { color: var(--text-primary); }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         nav a {
-            color: #CBD5E1;
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            position: relative;
         }
 
-        nav a:hover {
-            color: #00E5FF;
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width 0.3s;
         }
+
+        nav a:hover { color: var(--accent-cyan); }
+        nav a:hover::after { width: 100%; }
 
         /* Hero Section */
         .hero {
@@ -67,406 +99,456 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            padding: 7rem 5% 4rem;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
-            overflow: hidden;
         }
 
         .hero::before {
-            content: '';
+            content: '> ';
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-            top: 10%;
-            right: -10%;
-            border-radius: 50%;
+            top: 20%;
+            left: 5%;
+            color: var(--accent-cyan);
+            opacity: 0.3;
+            font-size: 1.2rem;
+            animation: blink 1s infinite;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
-            bottom: 10%;
-            left: -5%;
-            border-radius: 50%;
+        @keyframes blink {
+            0%, 50% { opacity: 0.3; }
+            51%, 100% { opacity: 0; }
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 800px;
+            text-align: center;
             z-index: 1;
         }
 
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent-cyan);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
         .hero h1 {
-            font-size: 3.5rem;
-            color: #F8FAFC;
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
             font-weight: 700;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero .tagline {
-            font-size: 1.5rem;
-            color: #00E5FF;
-            margin-bottom: 2rem;
-            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
         .hero .description {
-            font-size: 1.2rem;
-            color: #94A3B8;
-            margin-bottom: 3rem;
-            max-width: 700px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .badges {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid #3B82F6;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            color: #3B82F6;
-            font-weight: 600;
-            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-            display: inline-block;
-            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
-            background: #3B82F6;
-            color: white;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: var(--bg-primary);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.25);
         }
 
         .btn-primary:hover {
-            background: #2563EB;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(59, 130, 246, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #00E5FF;
-            border: 2px solid #00E5FF;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
-            background: rgba(0, 229, 255, 0.1);
-            transform: translateY(-2px);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.05);
         }
 
         /* Section Styles */
         section {
-            padding: 6rem 5%;
+            padding: 5rem 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
         .section-title {
-            font-size: 2.5rem;
-            color: #F8FAFC;
-            margin-bottom: 1rem;
-            text-align: center;
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-title::before {
+            content: '#';
+            color: var(--accent-cyan);
+            font-weight: 400;
         }
 
         .section-subtitle {
-            text-align: center;
-            color: #94A3B8;
-            margin-bottom: 4rem;
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
         }
 
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
         }
 
         .project-card {
-            background: #1E293B;
-            border-radius: 20px;
+            background: var(--bg-card);
+            border-radius: 12px;
             overflow: hidden;
             transition: all 0.3s;
-            border: 1px solid rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--border-color);
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
-            border-color: #3B82F6;
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .project-header {
-            background: linear-gradient(135deg, #3B82F6 0%, #00E5FF 100%);
-            padding: 2rem;
-            text-align: center;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(0, 212, 255, 0.1));
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .project-header h3 {
-            font-size: 1.8rem;
-            color: white;
-            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .project-icon {
+            font-size: 1.5rem;
         }
 
         .project-body {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
-        .project-problem {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-problem h4 {
-            color: #00E5FF;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .project-solution {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-solution h4 {
-            color: #3B82F6;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .tech-stack {
-            margin: 1.5rem 0;
+        .project-body p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 0.5rem;
+            margin-top: 1rem;
         }
 
         .tech-tag {
             background: rgba(59, 130, 246, 0.1);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-cyan);
+            text-decoration: none;
             font-size: 0.85rem;
-            color: #3B82F6;
+            margin-top: 1rem;
+            transition: gap 0.3s;
         }
 
-        .project-outcome {
-            background: rgba(0, 229, 255, 0.05);
-            padding: 1rem;
-            border-radius: 10px;
-            border-left: 3px solid #00E5FF;
-            margin: 1.5rem 0;
+        .project-link:hover {
+            gap: 0.8rem;
         }
 
-        .project-outcome h4 {
-            color: #00E5FF;
-            margin-bottom: 0.5rem;
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-cyan);
             font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .project-links {
+        .skill-tags {
             display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(0, 212, 255, 0.08);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+        }
+
+        /* Certifications */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            background: var(--bg-card);
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        .cert-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-info span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-profile {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--bg-primary);
+            margin: 0 auto 1rem;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .about-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .about-link {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-link:hover {
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        .about-text h3 {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-top: 1.5rem;
         }
 
-        .project-link {
-            flex: 1;
-            text-align: center;
-            padding: 0.8rem;
-            background: #3B82F6;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-
-        .project-link:hover {
-            background: #2563EB;
-            transform: translateY(-2px);
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .profile-placeholder {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3B82F6 0%, #00E5FF 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            margin: 0 auto;
-            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: #1E293B;
+        .info-item {
+            background: var(--bg-card);
             padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
-        .skill-card h4 {
-            color: #00E5FF;
-            margin-bottom: 0.5rem;
+        .info-item h4 {
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-item p {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin: 0;
         }
 
         /* Contact Section */
         .contact-container {
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .contact-form {
-            background: #1E293B;
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #00E5FF;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: #0F172A;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 10px;
-            color: #CBD5E1;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #3B82F6;
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .social-links {
+        .contact-info {
             display: flex;
-            gap: 1.5rem;
             justify-content: center;
-            margin-top: 2rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: #1E293B;
-            border-radius: 50%;
+        .contact-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #3B82F6;
+            gap: 0.5rem;
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: all 0.3s;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: color 0.3s;
         }
 
-        .social-link:hover {
-            background: #3B82F6;
-            color: white;
-            transform: translateY(-5px);
+        .contact-item:hover {
+            color: var(--accent-cyan);
         }
 
         /* Footer */
         footer {
-            background: #0F172A;
+            background: var(--bg-secondary);
             padding: 2rem 5%;
             text-align: center;
-            border-top: 1px solid rgba(59, 130, 246, 0.1);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
         }
+
+        footer span { color: var(--accent-cyan); }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .tagline {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
+            nav ul { gap: 1.5rem; }
+            .hero h1 { letter-spacing: -1px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -474,10 +556,11 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">FRS</div>
+            <div class="logo">FRS <span>| AI Engineer</span></div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -487,132 +570,277 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>FATHIMA ROSHINI SIYAD</h1>
-            <p class="tagline">AI Engineer • Innovator • Developer</p>
+            <span class="hero-badge">> AVAILABLE FOR PROJECTS</span>
+            <h1><span class="highlight">FATHIMA ROSHINI SIYAD</span></h1>
+            <p class="tagline">AI Engineer • ML Developer • Robotics Enthusiast</p>
             <p class="description">
-                I build intelligent systems that bridge software, AI, and real-world problem-solving. 
-                Focused on innovation, rapid prototyping, and scalable product engineering.
+                Building intelligent systems at the intersection of AI, robotics, and healthcare. 
+                Passionate about creating scalable solutions that make a real impact.
             </p>
-            <div class="badges">
-                <span class="badge">AI</span>
-                <span class="badge">Machine Learning</span>
-                <span class="badge">Full Stack</span>
-                <span class="badge">Innovation</span>
-            </div>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Intelligent systems solving real-world challenges</p>
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Intelligent systems solving real-world problems</p>
+        </div>
 
         <div class="projects-grid">
-            <!-- AIR GUARDIAN DRONE -->
+            <!-- RESPI AI -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>AIR GUARDIAN DRONE</h3>
+                    <h3>RESPI-AI</h3>
+                    <span class="project-icon">🫁</span>
                 </div>
                 <div class="project-body">
-                    <div class="project-problem">
-                        <h4>Problem</h4>
-                        <p>Traditional manual drones struggle with stable indoor flight due to GPS denial and sensor noise.</p>
+                    <p>AI-powered respiratory risk assessment system using deep learning and audio signal processing for early detection of respiratory abnormalities.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Audio Processing</span>
+                        <span class="tech-tag">Healthcare AI</span>
+                        <span class="tech-tag">FastAPI</span>
                     </div>
-                    <div class="project-solution">
-                        <h4>Solution</h4>
-                        <p>Built an autonomous micro-drone with optical flow stabilization, positional control using INAV, and predictive drift correction algorithms.</p>
+                    <a href="https://github.com/FATHIMA-ROSHINI/RESPI-AI" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+
+            <!-- AIR GUARDIAN -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>AirGuardian</h3>
+                    <span class="project-icon">🚁</span>
+                </div>
+                <div class="project-body">
+                    <p>Autonomous indoor drone with real-time air quality mapping and hazardous gas detection for industrial environments.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Robotics</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Autonomous AI</span>
+                        <span class="tech-tag">Sensors</span>
                     </div>
-                    <div class="tech-stack">
-                        <h4 style="color: #CBD5E1; margin-bottom: 0.5rem;">Tech Stack</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">INAV</span>
-                            <span class="tech-tag">Pixhawk</span>
-                            <span class="tech-tag">Optical Flow</span>
-                            <span class="tech-tag">Kalman Filters</span>
-                        </div>
-                    </div>
-                    <div class="project-outcome">
-                        <h4>Outcome</h4>
-                        <p>Achieved ~40% improvement in indoor stability and reduced drift to <25cm over a 3m hover duration.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
-                    </div>
+                    <a href="https://github.com/FATHIMA-ROSHINI/AirGuardian" class="project-link" target="_blank">View on GitHub →</a>
                 </div>
             </div>
 
             <!-- NEURO SIGHT -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>NEURO SIGHT</h3>
+                    <h3>NeuroSight</h3>
+                    <span class="project-icon">👁️</span>
                 </div>
                 <div class="project-body">
-                    <div class="project-problem">
-                        <h4>Problem</h4>
-                        <p>Early neurological signals are subtle and often untracked, leading to delayed understanding of cognitive strain.</p>
+                    <p>Browser-based AI screening system with TensorFlow.js inference — 100% on-device, zero data transmission for maximum privacy.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TensorFlow.js</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">PWA</span>
                     </div>
-                    <div class="project-solution">
-                        <h4>Solution</h4>
-                        <p>Developed an ML model using micro-expressions, blink rate, and eye-movement features to estimate cognitive load.</p>
-                    </div>
-                    <div class="tech-stack">
-                        <h4 style="color: #CBD5E1; margin-bottom: 0.5rem;">Tech Stack</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Keras</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">MediaPipe</span>
-                        </div>
-                    </div>
-                    <div class="project-outcome">
-                        <h4>Outcome</h4>
-                        <p>Prototype achieved consistent prediction accuracy during controlled cognitive tests.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
-                    </div>
+                    <a href="https://github.com/FATHIMA-ROSHINI/NeuroSight" class="project-link" target="_blank">View on GitHub →</a>
                 </div>
             </div>
 
-            <!-- RESPI AI -->
+            <!-- SENTINEL FRAUD ENGINE -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3>RESPI AI</h3>
+                    <h3>Sentinel Fraud Engine</h3>
+                    <span class="project-icon">🛡️</span>
                 </div>
                 <div class="project-body">
-                    <div class="project-problem">
-                        <h4>Problem</h4>
-                        <p>Respiratory conditions often go undetected until symptoms worsen.</p>
+                    <p>Real-time fraud detection with streaming pipeline, SHAP explainability, and live React monitoring dashboard.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SHAP</span>
+                        <span class="tech-tag">MLOps</span>
+                        <span class="tech-tag">React</span>
                     </div>
-                    <div class="project-solution">
-                        <h4>Solution</h4>
-                        <p>Created an AI model that analyzes breathing audio + spectrograms to detect abnormal respiration patterns.</p>
+                    <a href="https://github.com/FATHIMA-ROSHINI/sentinel-fraud-engine" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+
+            <!-- VOICE RECOGNITION -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Voice Gender Recognition</h3>
+                    <span class="project-icon">🎤</span>
+                </div>
+                <div class="project-body">
+                    <p>ML-based gender recognition system using voice audio analysis and feature extraction techniques.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">ML</span>
+                        <span class="tech-tag">Audio Analysis</span>
+                        <span class="tech-tag">Scikit-Learn</span>
                     </div>
-                    <div class="tech-stack">
-                        <h4 style="color: #CBD5E1; margin-bottom: 0.5rem;">Tech Stack</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Librosa</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Flask</span>
-                        </div>
+                    <a href="https://github.com/FATHIMA-ROSHINI/VOICE_GENDER_RECOGNITION-" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+
+            <!-- VOICE ASSISTANT -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Voice Assistant</h3>
+                    <span class="project-icon">🤖</span>
+                </div>
+                <div class="project-body">
+                    <p>Custom AI voice assistant with natural language processing capabilities for task automation.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Automation</span>
                     </div>
-                    <div class="project-outcome">
-                        <h4>Outcome</h4>
-                        <p>Prototype detected anomalies with >80% accuracy in test recordings.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
-                    </div>
+                    <a href="https://github.com/FATHIMA-ROSHINI/VOICE_ASSISTANT" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Tools and technologies I work with</p>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>⚡ AI / ML / Deep Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Keras</span>
+                    <span class="skill-tag">Scikit-Learn</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Generative AI</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">TensorFlow.js</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>🤖 Robotics & Hardware</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">ROS</span>
+                    <span class="skill-tag">Arduino</span>
+                    <span class="skill-tag">Embedded Systems</span>
+                    <span class="skill-tag">Sensors</span>
+                    <span class="skill-tag">Pixhawk</span>
+                    <span class="skill-tag">INAV</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>💻 Programming Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Dart</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>🌐 Web & Backend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>📊 Data & Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Jupyter</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">MediaPipe</span>
+                    <span class="skill-tag">Librosa</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>☁️ Cloud & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Google Cloud</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-header">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Continuous learning and professional development</p>
+        </div>
+
+        <div class="certs-grid">
+            <div class="cert-card">
+                <div class="cert-icon">🔵</div>
+                <div class="cert-info">
+                    <h4>IBM Deep Learning Specialization</h4>
+                    <span>IBM • Feb 2026</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🟢</div>
+                <div class="cert-info">
+                    <h4>MLOps for Generative AI</h4>
+                    <span>Google • Aug 2025</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🟣</div>
+                <div class="cert-info">
+                    <h4>ChatGPT Prompt Engineering</h4>
+                    <span>DeepLearning.AI • May 2025</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🔷</div>
+                <div class="cert-info">
+                    <h4>Prompt Design in Vertex AI</h4>
+                    <span>Google • Jul 2025</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🟠</div>
+                <div class="cert-info">
+                    <h4>Machine Learning with Python</h4>
+                    <span>IBM SkillsBuild • May 2025</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🔴</div>
+                <div class="cert-info">
+                    <h4>Diploma in Robotics</h4>
+                    <span>Alison • Dec 2025</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">🟡</div>
+                <div class="cert-info">
+                    <h4>Introduction to Deep Learning</h4>
+                    <span>Coursera • Feb 2026</span>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">⚫</div>
+                <div class="cert-info">
+                    <h4>Software Engineering Simulation</h4>
+                    <span>Accenture • Jul 2025</span>
                 </div>
             </div>
         </div>
@@ -620,44 +848,48 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">AI Engineer passionate about creating impactful solutions</p>
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">AI Engineer passionate about impactful technology</p>
+        </div>
 
-        <div class="about-content">
-            <div class="about-image">
-                <div class="profile-placeholder">FR</div>
+        <div class="about-grid">
+            <div class="about-profile">
+                <div class="profile-img">FR</div>
+                <div class="about-links">
+                    <a href="https://linkedin.com/in/fathima-roshini-siyad-8477292b3" class="about-link" target="_blank" title="LinkedIn">in</a>
+                    <a href="https://github.com/FATHIMA-ROSHINI" class="about-link" target="_blank" title="GitHub">GH</a>
+                    <a href="mailto:rxzrosh@gmail.com" class="about-link" title="Email">✉</a>
+                </div>
             </div>
             <div class="about-text">
-                <h3 style="color: #00E5FF; margin-bottom: 1rem; font-size: 1.8rem;">My Journey</h3>
-                <p style="margin-bottom: 1.5rem; line-height: 1.8;">
-                    I'm an AI engineer driven by curiosity and a passion for building systems that matter. 
-                    My work spans autonomous systems, computer vision, and health-tech AI applications. 
-                    I thrive in rapid prototyping environments and love turning complex problems into elegant, 
-                    scalable solutions.
+                <h3>B.Tech AI Engineering Student</h3>
+                <p>
+                    I'm an AI Engineering student driven by curiosity and a passion for building systems that matter. 
+                    My work spans autonomous robotics, computer vision, and healthcare AI applications.
                 </p>
-                <p style="margin-bottom: 1.5rem; line-height: 1.8;">
-                    With experience across hackathons, internships, and independent projects, I've developed 
-                    a unique blend of theoretical knowledge and hands-on engineering skills. My approach 
-                    combines rigorous problem-solving with creative innovation.
+                <p>
+                    With hands-on experience through internships, hackathons, and independent projects, 
+                    I've developed a unique blend of theoretical knowledge and practical engineering skills.
+                    I thrive in rapid prototyping and love turning complex problems into elegant solutions.
                 </p>
 
-                <h3 style="color: #3B82F6; margin-bottom: 1rem; margin-top: 2rem; font-size: 1.5rem;">Core Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h4>Machine Learning</h4>
-                        <p style="font-size: 0.9rem;">TensorFlow, Keras, PyTorch</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Education</h4>
+                        <p>B.Tech AI Engineering</p>
                     </div>
-                    <div class="skill-card">
-                        <h4>Computer Vision</h4>
-                        <p style="font-size: 0.9rem;">OpenCV, MediaPipe</p>
+                    <div class="info-item">
+                        <h4>University</h4>
+                        <p>Baselios Mathews II College</p>
                     </div>
-                    <div class="skill-card">
-                        <h4>Robotics</h4>
-                        <p style="font-size: 0.9rem;">INAV, Pixhawk, Sensors</p>
+                    <div class="info-item">
+                        <h4>Internship</h4>
+                        <p>AI & Robotics, STEM Robotics</p>
                     </div>
-                    <div class="skill-card">
-                        <h4>Full Stack</h4>
-                        <p style="font-size: 0.9rem;">Python, Flask, React</p>
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Trivandrum, Kerala</p>
                     </div>
                 </div>
             </div>
@@ -666,37 +898,30 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's collaborate on something amazing</p>
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's collaborate on something amazing</p>
+        </div>
 
         <div class="contact-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-            </form>
-
-            <div class="social-links">
-                <a href="#" class="social-link" title="Email">✉</a>
-                <a href="#" class="social-link" title="GitHub">⚙</a>
-                <a href="#" class="social-link" title="LinkedIn">in</a>
+            <div class="contact-info">
+                <a href="mailto:rxzrosh@gmail.com" class="contact-item">
+                    <span>✉</span> rxzrosh@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/fathima-roshini-siyad-8477292b3" class="contact-item" target="_blank">
+                    <span>in</span> LinkedIn
+                </a>
+                <a href="https://github.com/FATHIMA-ROSHINI" class="contact-item" target="_blank">
+                    <span>GH</span> GitHub
+                </a>
             </div>
+            <p style="opacity: 0.7;">Open for internships, collaborations, and project opportunities.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Fathima Roshini Siyad. Built with passion for innovation.</p>
+        <p>© 2026 <span>Fathima Roshini Siyad</span> — Built with <span>♥</span> using AI</p>
     </footer>
 </body>
 </html>

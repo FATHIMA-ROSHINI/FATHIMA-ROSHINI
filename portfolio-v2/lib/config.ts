@@ -42,7 +42,8 @@ export const PROJECTS: Project[] = [
     links: {
       github: "https://github.com/FATHIMA-ROSHINI/air-guardian", // Placeholder
       demo: "#"
-    }
+    },
+    image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Neuro Sight",
@@ -57,7 +58,8 @@ export const PROJECTS: Project[] = [
     links: {
       github: "https://github.com/FATHIMA-ROSHINI/neuro-sight", // Placeholder
       demo: "#"
-    }
+    },
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Respi AI",
@@ -72,6 +74,7 @@ export const PROJECTS: Project[] = [
     links: {
       github: "https://github.com/FATHIMA-ROSHINI/respi-ai", // Placeholder
       demo: "#"
-    }
+    },
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop"
   }
 ];
